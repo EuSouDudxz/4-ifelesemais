@@ -1,0 +1,40 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    Peça para o usuário informar o valor do terreno que deseja comprar. Peça também para ele informar em quantos anos pagará o financiamento do terreno.
+    Considere que:
+    Se o número de anos for até 5 (inclusive), haverá um desconto de 5% aplicado no valor do financiamento.
+    Se o número de anos for até 10 (inclusive), haverá um acréscimo de 15% aplicado no valor do financiamento.
+    Se o número de anos for acima de 10, haverá um acréscimo de 30%.
+    Apresente o valor final a ser pago pelo terreno, considerando o desconto ou acréscimo especificado para a quantidade de anos de financiamento.
+    */
+
+    // Entrada de dados
+    
+    let valorTerreno = parseFloat(prompt("Informe o valor do terreno (R$):"));
+    let anosFinanciamento = parseInt(prompt("Informe o número de anos para pagar o financiamento:"));
+    
+    // Processamento
+    
+    let valorFinal;
+
+if (anosFinanciamento <= 5) {
+    // Desconto de 5% para até 5 anos
+    valorFinal = valorTerreno * (1 - 0.05);
+} else if (anosFinanciamento <= 10) {
+    // Acréscimo de 15% para até 10 anos
+    valorFinal = valorTerreno * (1 + 0.15);
+} else {
+    // Acréscimo de 30% para mais de 10 anos
+    valorFinal = valorTerreno * (1 + 0.30);
+}
+
+    
+    // Saída de dados
+    document.write(`<p>Valor do terreno: R$ ${valorTerreno.toFixed(2)}</p>`);
+        document.write(`<p>Número de anos para o financiamento: ${anosFinanciamento}</p>`);
+        document.write(`<p>Valor final a ser pago: R$ ${valorFinal.toFixed(2)}</p>`);
+    </script>
+    
+
+</script>

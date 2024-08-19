@@ -1,0 +1,39 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    Peça para o programa perguntar para o usuário qual o assunto mais difícil da disciplina de Programação. Baseado nas respostas do usuário, apresente a respectiva mensagem:
+    - Se o usuário informar Variáveis e Operadores (VO), o programa apresentará a mensagem "1º Tri";
+    - Se o usuário informar Estrutura de Decisão (ED), o programa apresentará a mensagem "2º Tri";
+    - Se o usuário informar Estruturas de Repetição (RE), o programa apresentará a mensagem "3º Tri".
+    Apresente a mensagem em tela.
+    */
+
+    // Entrada de dados
+    
+    let assunto = prompt("Qual o assunto mais difícil da disciplina de Programação? (VO, ED, RE)");
+    
+    // Processamento
+    
+    let mensagem;
+
+switch (assunto.toUpperCase()) {
+    case "VO":
+        mensagem = "1º Tri";
+        break;
+    case "ED":
+        mensagem = "2º Tri";
+        break;
+    case "RE":
+        mensagem = "3º Tri";
+        break;
+    default:
+        mensagem = "Assunto desconhecido";
+        break;
+}
+    
+    // Saída de dados
+
+    document.write(`<p>${mensagem}</p>`);
+
+
+</script>
